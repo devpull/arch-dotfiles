@@ -17,7 +17,6 @@ alias ..='cd ../'
 alias ...='cd ../..'
 alias n='nvim'
 alias cat='bat'
-alias db='dotbare'
 
 # Colors for the prompt
 GREEN='\[\e[0;32m\]'
