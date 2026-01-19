@@ -3,7 +3,7 @@
 #
 # dotbare git for dotfiles
 source ~/.dotbare/dotbare.plugin.bash
-_dotbare_completion_cmd config
+_dotbare_completion_cmd dotbare
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -17,6 +17,7 @@ alias ..='cd ../'
 alias ...='cd ../..'
 alias n='nvim'
 alias cat='bat'
+alias db='dotbare'
 
 # Colors for the prompt
 GREEN='\[\e[0;32m\]'
