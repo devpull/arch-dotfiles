@@ -89,6 +89,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # Screenshot
     bindsym $mod+Shift+f1 exec grim -g "$(slurp)"
 
+    # Rofi
+    bindsym Alt+Space exec rofi -show window
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
