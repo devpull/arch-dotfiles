@@ -16,7 +16,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty 
 # Your preferred application launcher
-set $menu wmenu-run
+set $menu rofi -show window
 
 ### Output configuration
 #
@@ -28,6 +28,14 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# Clipboard
+#
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+# Binds Mod+v to show clipboard history with rofi, then copy selected item
+bindsym $mod+Alt+v exec cliphist list | rofi -dmenu -p "Буфер обмена" | cliphist decode | wl-copy
+
 
 ### Idle configuration
 #
